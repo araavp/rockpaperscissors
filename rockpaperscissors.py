@@ -203,12 +203,12 @@ def restart():
         start_game()
         return None
     # Ends game
-    if "n" in play_again:
+    elif "n" in play_again:
         print()
         print("Your final score is:", score)
         print("Your final record is:", record)
     # Checks stats
-    if 'st' in play_again:
+    elif 'st' in play_again:
         print()
         print("Total wins:", wins)
         print("Total losses:", losses)
@@ -216,6 +216,8 @@ def restart():
         print()
         print("Your score is:", score)
         print("Your record is:", record)
+        restart()
+    else:
         restart()
 
     exit()
